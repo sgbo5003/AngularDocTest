@@ -33,6 +33,10 @@
     </label>
   </div>
 
+  <p>
+    <button (click)="updateProfile()">Update Profile</button>
+  </p>
+
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <button type="submit" [disabled]="!profileForm.valid">Submit</button>
   </form>

@@ -22,4 +22,13 @@ export class ProfileEditorComponent {
   onSubmit(): void {
     console.warn(this.profileForm.value);
   }
+
+  updateProfile() {
+    this.profileForm.patchValue({
+      firstName: '박상준',
+      address: {
+        street: '덕영대로',
+      },
+    });
+  }
 }
