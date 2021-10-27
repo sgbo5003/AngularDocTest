@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {
+  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -21,6 +22,7 @@ export class ProfileEditorComponent {
       state: [''],
       zip: [''],
     }),
+    aliases: this.fb.array([this.fb.control('')]),
   });
   constructor(private fb: FormBuilder) {}
 
@@ -35,5 +37,15 @@ export class ProfileEditorComponent {
         street: '덕영대로',
       },
     });
+  }
+
+  // 게터
+  get aliases() {
+    return this.profileForm.get('aliases') as FormArray;
+  }
+
+  // 폼 컨트롤 항목 추가
+  addAlias() {
+    this.aliases.push(this.fb.control(''));
   }
 }
