@@ -6,9 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
-  declarations: [AppComponent, NameEditorComponent, ProfileEditorComponent],
+  declarations: [
+    AppComponent,
+    NameEditorComponent,
+    ProfileEditorComponent,
+    HttpComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

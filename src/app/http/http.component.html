@@ -1,0 +1,25 @@
+<div class="board-wrapper">
+  <button class="btn btn-primary" (click)="getSlice()">
+    10번째까지 보여주기
+  </button>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Table length</th>
+        <th>userId</th>
+        <th>id</th>
+        <th>title</th>
+        <th>completed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataArray">
+        <td>{{ dataArray.length }}</td>
+        <td>{{ data.userId }}</td>
+        <td>{{ data.id }}</td>
+        <td>{{ data.title }}</td>
+        <td>{{ data.completed }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
